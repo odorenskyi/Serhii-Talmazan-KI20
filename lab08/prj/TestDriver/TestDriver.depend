@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1616596549 source:d:\Проекты\Проекты - i курс - ii семестр\bmtp-lab-8-Талмазан\prj\testdriver\main.cpp
+	<iostream>
+	"ModulesTalmazan.h"
+
+1616593841 d:\Проекты\Проекты - i курс - ii семестр\bmtp-lab-8-Талмазан\prj\modulestalmazan\modulestalmazan.h
+
+1616596549 source:d:\Репозиторий\serhii-talmazan-ki20\lab08\prj\testdriver\main.cpp
+	<iostream>
+	"ModulesTalmazan.h"
+
+1616593841 d:\Репозиторий\serhii-talmazan-ki20\lab08\prj\modulestalmazan\modulestalmazan.h
+
