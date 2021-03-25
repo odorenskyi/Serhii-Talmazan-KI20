@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1616685110 source:d:\Проекты\Проекты - i курс - ii семестр\bmtp-lab-8-Талмазан\prj\talmazan_task\main.cpp
+	<iostream>
+	<windows.h>
+	"ModulesTalmazan.h"
+
