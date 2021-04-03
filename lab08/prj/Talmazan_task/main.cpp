@@ -1,5 +1,9 @@
 #include <iostream>
 #include <windows.h>
+#include <clocale>
+#include <wchar.h>
+#include <fcntl.h>
+#include <io.h>
 #include "ModulesTalmazan.h"
 
 using namespace std;
@@ -9,43 +13,49 @@ double x, y, z, S;
 
 void SoftwareDeveloper(){
 
-    system("chcp 65001 > nul");
+    _wsetlocale(LC_ALL,L" ");
+    _setmode(_fileno(stdout), _O_U8TEXT);
 
-    cout << ("╔════════════════════════════════════════════╗\n");
-    cout << ("║Талмазан Сергiй Дмитрович. ЦНТУ. 2021 рік. ©║\n");
-    cout <<( "╠════════════════════════════════════════════╣\n");
+    wcout << (L" Талмазан Сергiй Дмитрович. ЦНТУ. 2021 рiк. ©\n");
+
 }
 
 void MyFunc(int x, int y, int z, double S){
 
-    cout << "\n\n Уведіть x: ";
+    wcout << L"\n\n Уведiть x: ";
     cin >> x;
-    cout << "\n Уведіть y: ";
+
+    while (x < 0){
+            wcout << L"\n\n Уведiть x: ";
+            cin >> x;
+           }
+
+    wcout << L"\n Уведiть y: ";
     cin >> y;
-    cout << "\n Уведіть z: ";
+    wcout << L"\n Уведiть z: ";
     cin >> z;
 
-    cout << "\n x у десятковій системі = " << dec << x << endl;
-    cout << " x у шістнадцятковій системі = " << hex << x << endl;
+    wcout << L"\n x у десятковiй системi = " << dec << x << endl;
+    wcout << L" x у шістнадцятковій системі = " << hex << x << endl;
 
-    cout << "\n y у десятковій системі = " << dec << y << endl;
-    cout << " y у шістнадцятковій системі = " << hex << y << endl;
+    wcout << L"\n y у десятковiй системi = " << dec << y << endl;
+    wcout << L" y у шістнадцятковiй системi = " << hex << y << endl;
 
-    cout << "\n z у десятковій системі = " << dec << z << endl;
-    cout << " z у шістнадцятковій системі = " << hex << z << endl;
+    wcout << L"\n z у десятковiй системi = " << dec << z << endl;
+    wcout << L" z у шістнадцятковiй системi = " << hex << z << endl;
 
     S = s_calculation(x, y, z);
-    cout << "\n S = " << s_calculation(x, y, z) << endl;
+    wcout << "\n S = " << s_calculation(x, y, z) << endl;
 }
 
 void Logical_expression(char a, char b){
 
-    cout << "\n Уведіть a: ";
+    wcout << L"\n Уведiть a: ";
     cin >> a;
-    cout << "\n Уведіть b: ";
+    wcout << L"\n Уведiть b: ";
     cin >> b;
 
-    cout << "\n a + 7 = b: " << boolalpha << (a + 7 == b) << endl;
+    wcout << "\n a + 7 = b: " << boolalpha << (a + 7 == b) << endl;
 }
 
 int main()
