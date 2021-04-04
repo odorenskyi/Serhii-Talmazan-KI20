@@ -3,6 +3,7 @@
 #include <clocale>
 #include <wchar.h>
 #include <fcntl.h>
+#include <iomanip>
 #include <io.h>
 #include "ModulesTalmazan.h"
 
@@ -35,14 +36,14 @@ void MyFunc(int x, int y, int z, double S){
     wcout << L"\n Уведiть z: ";
     cin >> z;
 
-    wcout << L"\n x у десятковiй системi = " << dec << x << endl;
-    wcout << L" x у шістнадцятковій системі = " << hex << x << endl;
+    wcout << L"\n x у десятковiй системi = " << dec << x;
+    wcout << L"\n x у шiстнадцятковiй системi = " << hex << x << "\n";
 
-    wcout << L"\n y у десятковiй системi = " << dec << y << endl;
-    wcout << L" y у шістнадцятковiй системi = " << hex << y << endl;
+    wcout << L"\n y у десятковiй системi = " << dec << y;
+    wcout << L"\n y у шiстнадцятковiй системi = " << hex << y << "\n";;
 
-    wcout << L"\n z у десятковiй системi = " << dec << z << endl;
-    wcout << L" z у шістнадцятковiй системi = " << hex << z << endl;
+    wcout << L"\n z у десятковiй системi = " << dec << z;
+    wcout << L"\n z у шiстнадцятковiй системi = " << hex << z << "\n";;
 
     S = s_calculation(x, y, z);
     wcout << "\n S = " << s_calculation(x, y, z) << endl;
