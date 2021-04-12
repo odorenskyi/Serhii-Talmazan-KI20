@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1618239248 source:d:\Проекты\Проекты - i курс - ii семестр\bmtp-lab-8-Талмазан\prj\modulestalmazan\main.cpp
+	<iostream>
+	<cmath>
+	<wchar.h>
+	<io.h>
+	<string>
+	<bitset>
+	"ModulesTalmazan.h"
+
+1618239239 d:\Проекты\Проекты - i курс - ii семестр\bmtp-lab-8-Талмазан\prj\modulestalmazan\modulestalmazan.h
+
