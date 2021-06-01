@@ -77,7 +77,7 @@ int input_symbol(char *exist_file)
         output.open(exist_file);
         output.imbue(locale(locale(), new codecvt_utf8_utf16<wchar_t>));
 
-        output << number << L"\nКількість символів у файлі: " << number.length();
+        output << number << L"\nКiлькiсть символiв у файлi: " << number.length();
         output.close();
 
     }else{
@@ -85,7 +85,7 @@ int input_symbol(char *exist_file)
         output.open(exist_file);
         output.imbue(locale(locale(), new codecvt_utf8_utf16<wchar_t>));
 
-        output << number << L"\nКількість символів у файлі: " << number.length();
+        output << number << L"\nКiлькiсть символiв у файлi: " << number.length();
         output.close();
     }
 
@@ -133,15 +133,15 @@ int task_10_2(char *exist_file){
     input2.imbue(locale(locale(), new codecvt_utf8_utf16<wchar_t>));
     input2.open("input.txt", ios_base::app);
 
-    input2 << L"\nДержавний Прапор України — стяг із двох рівновеликих горизонтальних смуг синього і жовтого кольорів.\n\n";
-    input2 << L"Великий Державний Герб України встановлюється з урахуванням малого Державного Герба України та герба \nВійська Запорізького законом, що приймається не менш як двома третинами \nвід конституційного складу Верховної Ради України\n\n";
-    input2 << L"Державний Гімн України — ";
-    input2 << L"Ще не вмерла України і слава, і воля,\n"
-             "Ще нам, браття молодії, усміхнеться доля.\n"
-             "Згинуть наші воріженьки, як роса на сонці.\n"
-             "Запануєм і ми, браття, у своїй сторонці.\n"
-             "Душу й тіло ми положим за нашу свободу,\n"
-             "І покажем, що ми, браття, козацького роду.\n\n";
+    input2 << L"\nДержавний Прапор України — стяг iз двох рiвновеликих горизонтальних смуг синього i жовтого кольорiв.\n\n";
+    input2 << L"Великий Державний Герб України встановлюється з урахуванням малого Державного Герба України та герба \nВiйська Запорiзького законом, що приймається не менш як двома третинами \nвiд конституцiйного складу Верховної Ради України\n\n";
+    input2 << L"Державний Гiмн України — ";
+    input2 << L"Ще не вмерла України i слава, i воля,\n"
+             "Ще нам, браття молодiї, усмiхнеться доля.\n"
+             "Згинуть нашi ворiженьки, як роса на сонцi.\n"
+             "Запануєм i ми, браття, у своїй сторонцi.\n"
+             "Душу й тiло ми положим за нашу свободу,\n"
+             "I покажем, що ми, браття, козацького роду.\n\n";
 
     input2 << endl << L"Дата дозапису: " << ctime(&cur_date);
     input2.close();
@@ -181,7 +181,7 @@ int calculation(char *outputName, double x, double y, double z, double *S, int *
     *S = s_calculation(x, y, z);
 
     outputFile << L"Результат виконання s_calculation: " << *S << endl
-               << L"Число b у двійковій системі числення: " << *binNum;
+               << L"Число b у двiйковiй системi числення: " << *binNum;
 
     outputFile.close();
 
@@ -238,23 +238,23 @@ int search_word(char *inputName, char *outputName, int *vowelNum){
     outputFile.imbue(locale(locale(), new codecvt_utf8_utf16<wchar_t>));
     outputFile.clear();
 
-    outputFile << L"\nТалмазан Сергій Дмитрович.\nЦНТУ, Кропивницький.\nУкраїна 2021 рік." << endl;
+    outputFile << L"\nТалмазан Сергiй Дмитрович.\nЦНТУ, Кропивницький.\nУкраїна 2021 рiк." << endl;
 
     bool Marker = 0;
     int testRes = 0;
 
     if(wcsstr(words, wstr)){
 
-        outputFile << L"Cлово " << wstr << L" присутнє в задачі." << endl;
+        outputFile << L"Cлово " << wstr << L" присутнє в задачi." << endl;
 
-        outputFile << number << L"\nКількість символів містяться в вхідному файлі ";
+        outputFile << number << L"\nКiлькiсть символiв мiстяться в вхiдному файлi ";
 
         testRes = 1;
 
     }else{
 
-        outputFile << L"Cлово " << wstr << L" відсутнє в задачі" << endl;
-        outputFile << number << L"\nКількість символів містяться в вхідному файлі ";
+        outputFile << L"Cлово " << wstr << L" вiдсутнє в задачi" << endl;
+        outputFile << number << L"\nКiлькiсть символiв мiстяться в вхiдному файлi ";
         testRes = 2;
     }
 
@@ -286,7 +286,7 @@ void task10_1(){
 
     }else{
 
-        fout << L"\nТалмазан Сергій Дмитрович.\nЦНТУ, Кропивницький.\nУкраїна 2021 рік." << endl;
+        fout << L"\nТалмазан Сергiй Дмитрович.\nЦНТУ, Кропивницький.\nУкраїна 2021 рiк." << endl;
 
         while(!fin.eof()){
 
@@ -317,13 +317,13 @@ void task10_1(){
 
         if(pos == -1){
 
-            fout << "У файлі input.txt немає слів: модуль або програміст або студент\n";
-            fout << "У файлі input.txt кількість символів";
+            fout << "У файлi input.txt немає слiв: модуль або програміст або студент\n";
+            fout << "У файлi input.txt кiлькiсть символiв";
 
         }else{
 
-            fout << "У файлі input.txt є слова: модуль або програміст або студент\n";
-            fout << "У файлі input.txt кількість символів";
+            fout << "У файлi input.txt є слова: модуль або програмiст або студент\n";
+            fout << "У файлi input.txt кількiсть символiв";
         }
     }
 
